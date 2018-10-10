@@ -1,0 +1,2600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1197</width>
+    <height>252</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ardesia</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../sankore.qrc">
+    <normaloff>:/images/uniboard.png</normaloff>:/images/uniboard.png</iconset>
+  </property>
+  <property name="locale">
+   <locale language="Italian" country="Italy"/>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>32</width>
+    <height>32</height>
+   </size>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextUnderIcon</enum>
+  </property>
+  <property name="animated">
+   <bool>false</bool>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QToolBar" name="boardToolBar">
+   <property name="contextMenuPolicy">
+    <enum>Qt::PreventContextMenu</enum>
+   </property>
+   <property name="windowTitle">
+    <string>Board</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::BottomToolBarArea|Qt::TopToolBarArea</set>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionStylus"/>
+   <addaction name="actionBackgrounds"/>
+   <addaction name="separator"/>
+   <addaction name="actionUndo"/>
+   <addaction name="actionRedo"/>
+   <addaction name="separator"/>
+   <addaction name="actionPages"/>
+   <addaction name="actionBack"/>
+   <addaction name="actionForward"/>
+   <addaction name="separator"/>
+   <addaction name="actionErase"/>
+   <addaction name="actionGroupItems"/>
+   <addaction name="actionBoard"/>
+   <addaction name="actionWeb"/>
+   <addaction name="actionDocument"/>
+   <addaction name="actionImport"/>
+   <addaction name="actionExport"/>
+   <addaction name="actionDesktop"/>
+   <addaction name="actionHideApplication"/>
+   <addaction name="actionQuit"/>
+   <addaction name="actionMenu"/>
+  </widget>
+  <widget class="QToolBar" name="webToolBar">
+   <property name="contextMenuPolicy">
+    <enum>Qt::PreventContextMenu</enum>
+   </property>
+   <property name="windowTitle">
+    <string>Web</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::BottomToolBarArea|Qt::TopToolBarArea</set>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="actionWebTools"/>
+   <addaction name="separator"/>
+   <addaction name="actionWebBack"/>
+   <addaction name="actionWebForward"/>
+   <addaction name="actionWebReload"/>
+   <addaction name="actionStopLoading"/>
+   <addaction name="actionHome"/>
+   <addaction name="actionBookmark"/>
+   <addaction name="separator"/>
+   <addaction name="actionWebBigger"/>
+   <addaction name="actionWebSmaller"/>
+   <addaction name="separator"/>
+   <addaction name="actionBoard"/>
+   <addaction name="actionWeb"/>
+   <addaction name="actionDocument"/>
+   <addaction name="actionDesktop"/>
+   <addaction name="actionHideApplication"/>
+   <addaction name="actionQuit"/>
+   <addaction name="actionMenu"/>
+  </widget>
+  <widget class="QToolBar" name="documentToolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::PreventContextMenu</enum>
+   </property>
+   <property name="windowTitle">
+    <string>Documents</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::BottomToolBarArea|Qt::TopToolBarArea</set>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="actionDocumentTools"/>
+   <addaction name="separator"/>
+   <addaction name="actionNewFolder"/>
+   <addaction name="actionNewDocument"/>
+   <addaction name="separator"/>
+   <addaction name="actionImport"/>
+   <addaction name="actionExport"/>
+   <addaction name="actionRename"/>
+   <addaction name="separator"/>
+   <addaction name="actionDuplicate"/>
+   <addaction name="actionDelete"/>
+   <addaction name="separator"/>
+   <addaction name="actionDocumentAdd"/>
+   <addaction name="actionAddToWorkingDocument"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionBoard"/>
+   <addaction name="actionWeb"/>
+   <addaction name="actionDocument"/>
+   <addaction name="actionDesktop"/>
+   <addaction name="actionHideApplication"/>
+   <addaction name="actionQuit"/>
+   <addaction name="actionMenu"/>
+  </widget>
+  <widget class="QToolBar" name="tutorialToolBar">
+   <property name="contextMenuPolicy">
+    <enum>Qt::PreventContextMenu</enum>
+   </property>
+   <property name="windowTitle">
+    <string>Tutorial</string>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::BottomToolBarArea|Qt::TopToolBarArea</set>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="actionWebBack"/>
+   <addaction name="actionWebForward"/>
+   <addaction name="actionBoard"/>
+   <addaction name="actionWeb"/>
+   <addaction name="actionDocument"/>
+   <addaction name="actionHideApplication"/>
+   <addaction name="actionMenu"/>
+   <addaction name="actionQuit"/>
+  </widget>
+  <action name="actionStylus">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/stylus.png</normaloff>:/images/toolbar/stylus.png</iconset>
+   </property>
+   <property name="text">
+    <string>Penna</string>
+   </property>
+   <property name="iconText">
+    <string>Penna</string>
+   </property>
+   <property name="toolTip">
+    <string>Penna</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionBackgrounds">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/background.png</normaloff>:/images/toolbar/background.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sfondi</string>
+   </property>
+   <property name="toolTip">
+    <string>Cambia Sfondo</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/undoOn.png</normaloff>:/images/toolbar/undoOn.png</iconset>
+   </property>
+   <property name="text">
+    <string>Annulla</string>
+   </property>
+   <property name="toolTip">
+    <string>Annulla</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/redoOn.png</normaloff>:/images/toolbar/redoOn.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ripeti</string>
+   </property>
+   <property name="toolTip">
+    <string>Ripeti</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionBack">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/previousPageOn.png</normaloff>:/images/toolbar/previousPageOn.png</iconset>
+   </property>
+   <property name="text">
+    <string>Precedente</string>
+   </property>
+   <property name="toolTip">
+    <string>Pagina Precedente</string>
+   </property>
+   <property name="shortcut">
+    <string>PgUp</string>
+   </property>
+  </action>
+  <action name="actionForward">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/nextPageOn.png</normaloff>:/images/toolbar/nextPageOn.png</iconset>
+   </property>
+   <property name="text">
+    <string>Successiva</string>
+   </property>
+   <property name="toolTip">
+    <string>Pagina Successiva</string>
+   </property>
+   <property name="shortcut">
+    <string>PgDown</string>
+   </property>
+  </action>
+  <action name="actionDocument">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/documents.png</normaloff>:/images/toolbar/documents.png</iconset>
+   </property>
+   <property name="text">
+    <string>Documenti</string>
+   </property>
+   <property name="toolTip">
+    <string>Gestisci i Documenti</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionWeb">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/web.png</normaloff>:/images/toolbar/web.png</iconset>
+   </property>
+   <property name="text">
+    <string>Web</string>
+   </property>
+   <property name="toolTip">
+    <string>Web Browsing</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="actionLineSmall">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/smallPen.png</normaloff>:/images/toolbar/smallPen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Linea</string>
+   </property>
+   <property name="toolTip">
+    <string>Linea Sottile</string>
+   </property>
+  </action>
+  <action name="actionLineMedium">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/mediumPen.png</normaloff>:/images/toolbar/mediumPen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Linea</string>
+   </property>
+   <property name="toolTip">
+    <string>Linea Media</string>
+   </property>
+  </action>
+  <action name="actionLineLarge">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/largePen.png</normaloff>:/images/toolbar/largePen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Linea</string>
+   </property>
+   <property name="toolTip">
+    <string>Linea Spessa</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/quitOn.png</normaloff>:/images/toolbar/quitOn.png</iconset>
+   </property>
+   <property name="text">
+    <string>Esci</string>
+   </property>
+   <property name="toolTip">
+    <string>Esci da Ardesia</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionEraserSmall">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/smallEraser.png</normaloff>:/images/toolbar/smallEraser.png</iconset>
+   </property>
+   <property name="text">
+    <string>Gomma</string>
+   </property>
+   <property name="toolTip">
+    <string>Gomma Piccola</string>
+   </property>
+  </action>
+  <action name="actionEraserMedium">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/mediumEraser.png</normaloff>:/images/toolbar/mediumEraser.png</iconset>
+   </property>
+   <property name="text">
+    <string>Gomma</string>
+   </property>
+   <property name="toolTip">
+    <string>Gomma Media</string>
+   </property>
+  </action>
+  <action name="actionEraserLarge">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/largeEraser.png</normaloff>:/images/toolbar/largeEraser.png</iconset>
+   </property>
+   <property name="text">
+    <string>Gomma</string>
+   </property>
+   <property name="toolTip">
+    <string>Gomma Grande</string>
+   </property>
+  </action>
+  <action name="actionColor0">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/color.png</normaloff>:/images/toolbar/color.png</iconset>
+   </property>
+   <property name="text">
+    <string>Colore</string>
+   </property>
+   <property name="toolTip">
+    <string>Colore</string>
+   </property>
+  </action>
+  <action name="actionColor1">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/color.png</normaloff>:/images/toolbar/color.png</iconset>
+   </property>
+   <property name="text">
+    <string>Colore</string>
+   </property>
+   <property name="toolTip">
+    <string>Colore</string>
+   </property>
+  </action>
+  <action name="actionColor2">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/color.png</normaloff>:/images/toolbar/color.png</iconset>
+   </property>
+   <property name="text">
+    <string>Colore</string>
+   </property>
+   <property name="toolTip">
+    <string>Colore</string>
+   </property>
+  </action>
+  <action name="actionColor3">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/color.png</normaloff>:/images/toolbar/color.png</iconset>
+   </property>
+   <property name="text">
+    <string>Colore</string>
+   </property>
+   <property name="toolTip">
+    <string>Colore</string>
+   </property>
+  </action>
+  <action name="actionWebBack">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/previousPageOn.png</normaloff>:/images/toolbar/previousPageOn.png</iconset>
+   </property>
+   <property name="text">
+    <string>Indietro</string>
+   </property>
+   <property name="toolTip">
+    <string>Pagina Precedente</string>
+   </property>
+   <property name="shortcut">
+    <string>Left</string>
+   </property>
+  </action>
+  <action name="actionWebForward">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/nextPageOn.png</normaloff>:/images/toolbar/nextPageOn.png</iconset>
+   </property>
+   <property name="text">
+    <string>Avanti</string>
+   </property>
+   <property name="toolTip">
+    <string>Pagina Successiva</string>
+   </property>
+   <property name="shortcut">
+    <string>Right</string>
+   </property>
+  </action>
+  <action name="actionWebReload">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/reload.png</normaloff>:/images/toolbar/reload.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ricarica</string>
+   </property>
+   <property name="toolTip">
+    <string>Aggiorna la Pagina Corrente</string>
+   </property>
+  </action>
+  <action name="actionHome">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/home.png</normaloff>:/images/toolbar/home.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pagina Iniziale</string>
+   </property>
+   <property name="toolTip">
+    <string>Pagina Iniziale</string>
+   </property>
+  </action>
+  <action name="actionBookmarks">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/bookmarks.png</normaloff>:/images/toolbar/bookmarks.png</iconset>
+   </property>
+   <property name="text">
+    <string>Segnalibri</string>
+   </property>
+   <property name="toolTip">
+    <string>Mostra i Segnalibri</string>
+   </property>
+  </action>
+  <action name="actionAddBookmark">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/addBookmark.png</normaloff>:/images/toolbar/addBookmark.png</iconset>
+   </property>
+   <property name="text">
+    <string>Segnalibro</string>
+   </property>
+   <property name="iconText">
+    <string>Add Bookmark</string>
+   </property>
+   <property name="toolTip">
+    <string>Segnalibro</string>
+   </property>
+  </action>
+  <action name="actionBoard">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/board.png</normaloff>:/images/toolbar/board.png</iconset>
+   </property>
+   <property name="text">
+    <string>Lavagna</string>
+   </property>
+   <property name="toolTip">
+    <string>Mostra la Lavagna</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionErase">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/clearPage.png</normaloff>:/images/toolbar/clearPage.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cancella</string>
+   </property>
+   <property name="toolTip">
+    <string>Cancella Lavagna</string>
+   </property>
+  </action>
+  <action name="actionPreferences">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/settings.png</normaloff>:/images/toolbar/settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>Preferenze</string>
+   </property>
+   <property name="toolTip">
+    <string>Mostra le Preferenze</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionLibrary">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/library.png</normaloff>:/images/toolbar/library.png</iconset>
+   </property>
+   <property name="text">
+    <string>Libreria</string>
+   </property>
+   <property name="toolTip">
+    <string>Mostra la Libreria</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionMenu">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/menu.png</normaloff>:/images/toolbar/menu.png</iconset>
+   </property>
+   <property name="text">
+    <string>Impostazioni</string>
+   </property>
+   <property name="toolTip">
+    <string>Impostazioni</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionDesktop">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/display.png</normaloff>:/images/toolbar/display.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mostra Desktop</string>
+   </property>
+   <property name="toolTip">
+    <string>Mostra il Desktop</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+H</string>
+   </property>
+  </action>
+  <action name="actionWebBigger">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/stylusPalette/zoomIn.png</normaloff>:/images/stylusPalette/zoomIn.png</iconset>
+   </property>
+   <property name="text">
+    <string>Più Grande</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom +</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl++</string>
+   </property>
+  </action>
+  <action name="actionWebSmaller">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/stylusPalette/zoomOut.png</normaloff>:/images/stylusPalette/zoomOut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Più Piccolo</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom -</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+-</string>
+   </property>
+  </action>
+  <action name="actionNewFolder">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/newFolder.png</normaloff>:/images/toolbar/newFolder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nuova Cartella</string>
+   </property>
+   <property name="toolTip">
+    <string>Crea una nuova cartella</string>
+   </property>
+  </action>
+  <action name="actionNewDocument">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/newDocument.png</normaloff>:/images/toolbar/newDocument.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nuovo Documento</string>
+   </property>
+   <property name="toolTip">
+    <string>Crea un nuovo documento</string>
+   </property>
+  </action>
+  <action name="actionImport">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/import.png</normaloff>:/images/toolbar/import.png</iconset>
+   </property>
+   <property name="text">
+    <string>Carica</string>
+   </property>
+   <property name="toolTip">
+    <string>Carica Documento</string>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/export.png</normaloff>:/images/toolbar/export.png</iconset>
+   </property>
+   <property name="text">
+    <string>Salva</string>
+   </property>
+   <property name="toolTip">
+    <string>Salva Documento</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/open.png</normaloff>:/images/toolbar/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Apri nella Lavagna</string>
+   </property>
+   <property name="toolTip">
+    <string>Apri la pagina nella lavagna</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionDuplicate">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/duplicate.png</normaloff>:/images/toolbar/duplicate.png</iconset>
+   </property>
+   <property name="text">
+    <string>Duplica</string>
+   </property>
+   <property name="toolTip">
+    <string>Duplica il contenuto selezionato</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/deleteDocument.png</normaloff>:/images/toolbar/deleteDocument.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cancella</string>
+   </property>
+   <property name="toolTip">
+    <string>Cancella il contenuto selezionato</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="actionAddToWorkingDocument">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/addToWorkingDoc.png</normaloff>:/images/toolbar/addToWorkingDoc.png</iconset>
+   </property>
+   <property name="text">
+    <string>Aggiungi al documento</string>
+   </property>
+   <property name="toolTip">
+    <string>Aggiungi il contenuto selezionato al documento aperto</string>
+   </property>
+  </action>
+  <action name="actionDocumentAdd">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/addToPage.png</normaloff>:/images/toolbar/addToPage.png</iconset>
+   </property>
+   <property name="text">
+    <string>Aggiungi</string>
+   </property>
+   <property name="toolTip">
+    <string>Aggiungi il contenuto al documento</string>
+   </property>
+  </action>
+  <action name="actionRename">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/rename.png</normaloff>:/images/toolbar/rename.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rinomina</string>
+   </property>
+   <property name="toolTip">
+    <string>Rinomina Contenuto</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::TextHeuristicRole</enum>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionDocumentTools">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/tools.png</normaloff>:/images/toolbar/tools.png</iconset>
+   </property>
+   <property name="text">
+    <string>Strumenti</string>
+   </property>
+   <property name="toolTip">
+    <string>Mostra gli Strumenti</string>
+   </property>
+  </action>
+  <action name="actionWebTools">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/tools.png</normaloff>:/images/toolbar/tools.png</iconset>
+   </property>
+   <property name="text">
+    <string>Strumenti</string>
+   </property>
+   <property name="toolTip">
+    <string>Mostra gli Strumenti</string>
+   </property>
+  </action>
+  <action name="actionMultiScreen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/display.png</normaloff>:/images/toolbar/display.png</iconset>
+   </property>
+   <property name="text">
+    <string>Multi Screen</string>
+   </property>
+  </action>
+  <action name="actionWidePageSize">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/addToPage.png</normaloff>:/images/toolbar/addToPage.png</iconset>
+   </property>
+   <property name="text">
+    <string>Wide Size (16/9)</string>
+   </property>
+   <property name="iconText">
+    <string>Wide Size (16/9)</string>
+   </property>
+   <property name="toolTip">
+    <string>Use Document Wide Size (16/9)</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionRegularPageSize">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/addToPage.png</normaloff>:/images/toolbar/addToPage.png</iconset>
+   </property>
+   <property name="text">
+    <string>Regular Size (4/3)</string>
+   </property>
+   <property name="iconText">
+    <string>Regular Size (4/3)</string>
+   </property>
+   <property name="toolTip">
+    <string>Use Document Regular Size (4/3)</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionCustomPageSize">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/addToPage.png</normaloff>:/images/toolbar/addToPage.png</iconset>
+   </property>
+   <property name="text">
+    <string>Custom Size</string>
+   </property>
+   <property name="iconText">
+    <string>Custom Size</string>
+   </property>
+   <property name="toolTip">
+    <string>Use Custom Document Size</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionStopLoading">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/deleteDocument.png</normaloff>:/images/toolbar/deleteDocument.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+   <property name="toolTip">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/cut.png</normaloff>:/images/toolbar/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Taglia</string>
+   </property>
+   <property name="toolTip">
+    <string>Taglia</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/copy.png</normaloff>:/images/toolbar/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copia</string>
+   </property>
+   <property name="toolTip">
+    <string>Copia</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/paste.png</normaloff>:/images/toolbar/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>Incolla</string>
+   </property>
+   <property name="toolTip">
+    <string>Incolla</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::TextHeuristicRole</enum>
+   </property>
+  </action>
+  <action name="actionSleep">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/extraPalette/blackout.png</normaloff>
+     <normalon>:/images/extraPalette/blackoutOn.png</normalon>:/images/extraPalette/blackout.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pausa</string>
+   </property>
+   <property name="toolTip">
+    <string>Metti in pausa la presentazione</string>
+   </property>
+  </action>
+  <action name="actionVirtualKeyboard">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/extraPalette/keyboard.png</normaloff>
+     <normalon>:/images/extraPalette/keyboardOn.png</normalon>:/images/extraPalette/keyboard.png</iconset>
+   </property>
+   <property name="text">
+    <string>Tastiera Virtuale</string>
+   </property>
+   <property name="toolTip">
+    <string>Mostra la tastiera virtuale</string>
+   </property>
+  </action>
+  <action name="actionPlainLightBackground">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/backgroundPalette/background1.svg</normaloff>
+     <normalon>:/images/backgroundPalette/background1On.svg</normalon>:/images/backgroundPalette/background1.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Sfondo chiaro</string>
+   </property>
+   <property name="iconText">
+    <string>Light</string>
+   </property>
+   <property name="toolTip">
+    <string>Sfondo chiaro</string>
+   </property>
+  </action>
+  <action name="actionCrossedLightBackground">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/backgroundPalette/background2.svg</normaloff>
+     <normalon>:/images/backgroundPalette/background2On.svg</normalon>:/images/backgroundPalette/background2.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Sfondo a griglia chiaro</string>
+   </property>
+   <property name="iconText">
+    <string>Light</string>
+   </property>
+   <property name="toolTip">
+    <string>Sfondo a griglia chiaro</string>
+   </property>
+  </action>
+  <action name="actionPlainDarkBackground">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/backgroundPalette/background3.svg</normaloff>
+     <normalon>:/images/backgroundPalette/background3On.svg</normalon>:/images/backgroundPalette/background3.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Sfondo Scuro</string>
+   </property>
+   <property name="iconText">
+    <string>Dark</string>
+   </property>
+   <property name="toolTip">
+    <string>Sfondo Scuro</string>
+   </property>
+  </action>
+  <action name="actionCrossedDarkBackground">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/backgroundPalette/background4.svg</normaloff>
+     <normalon>:/images/backgroundPalette/background4On.svg</normalon>:/images/backgroundPalette/background4.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Sfondo a griglia scuro</string>
+   </property>
+   <property name="iconText">
+    <string>Dark</string>
+   </property>
+   <property name="toolTip">
+    <string>Sfondo a griglia scuro</string>
+   </property>
+  </action>
+  <action name="actionPodcast">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/record.png</normaloff>:/images/toolbar/record.png</iconset>
+   </property>
+   <property name="text">
+    <string>Podcast</string>
+   </property>
+   <property name="toolTip">
+    <string>Registra presentazione</string>
+   </property>
+  </action>
+  <action name="actionPodcastRecord">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/record.png</normaloff>
+     <normalon>:/images/toolbar/stop.png</normalon>:/images/toolbar/record.png</iconset>
+   </property>
+   <property name="text">
+    <string>Registra</string>
+   </property>
+   <property name="toolTip">
+    <string>Inizia registrazione schermo</string>
+   </property>
+  </action>
+  <action name="actionEraseItems">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/erasePalette/eraseItem.svg</normaloff>:/images/erasePalette/eraseItem.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Cancella tutto</string>
+   </property>
+   <property name="toolTip">
+    <string>Cancella Tutto</string>
+   </property>
+  </action>
+  <action name="actionEraseAnnotations">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/erasePalette/eraseAnnotation.svg</normaloff>:/images/erasePalette/eraseAnnotation.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Cancella Annotazioni</string>
+   </property>
+   <property name="toolTip">
+    <string>Cancella Annotazioni</string>
+   </property>
+  </action>
+  <action name="actionClearPage">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/erasePalette/eraseAll.svg</normaloff>:/images/erasePalette/eraseAll.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Pulisci Pagina</string>
+   </property>
+   <property name="toolTip">
+    <string>Cancella tutti gli elementi</string>
+   </property>
+  </action>
+  <action name="actionAdd">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/addToPage.png</normaloff>:/images/toolbar/addToPage.png</iconset>
+   </property>
+   <property name="text">
+    <string>Aggiungi</string>
+   </property>
+   <property name="toolTip">
+    <string>Aggiungi</string>
+   </property>
+  </action>
+  <action name="actionPen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/stylusPalette/pen.png</normaloff>
+     <normalon>:/images/stylusPalette/penOn.png</normalon>:/images/stylusPalette/pen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Penna</string>
+   </property>
+   <property name="toolTip">
+    <string>Annota Documento</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionEraser">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/stylusPalette/eraser.png</normaloff>
+     <normalon>:/images/stylusPalette/eraserOn.png</normalon>:/images/stylusPalette/eraser.png</iconset>
+   </property>
+   <property name="text">
+    <string>Gomma</string>
+   </property>
+   <property name="toolTip">
+    <string>Cancella Annotazione</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionMarker">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/stylusPalette/marker.png</normaloff>
+     <normalon>:/images/stylusPalette/markerOn.png</normalon>:/images/stylusPalette/marker.png</iconset>
+   </property>
+   <property name="text">
+    <string>Evidenziatore</string>
+   </property>
+   <property name="toolTip">
+    <string>Evidenzia</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+M</string>
+   </property>
+  </action>
+  <action name="actionSelector">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/stylusPalette/arrow.png</normaloff>
+     <normalon>:/images/stylusPalette/arrowOn.png</normalon>:/images/stylusPalette/arrow.png</iconset>
+   </property>
+   <property name="text">
+    <string>Seleziona</string>
+   </property>
+   <property name="toolTip">
+    <string>Seleziona e modifica oggetti</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionHand">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/stylusPalette/hand.png</normaloff>
+     <normalon>:/images/stylusPalette/handOn.png</normalon>:/images/stylusPalette/hand.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mano</string>
+   </property>
+   <property name="toolTip">
+    <string>Scorri Pagina</string>
+   </property>
+  </action>
+  <action name="actionZoomIn">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/stylusPalette/zoomIn.png</normaloff>
+     <normalon>:/images/stylusPalette/zoomInOn.png</normalon>:/images/stylusPalette/zoomIn.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom +</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom +</string>
+   </property>
+  </action>
+  <action name="actionZoomOut">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/stylusPalette/zoomOut.png</normaloff>
+     <normalon>:/images/stylusPalette/zoomOutOn.png</normalon>:/images/stylusPalette/zoomOut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom -</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom -</string>
+   </property>
+  </action>
+  <action name="actionPointer">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/stylusPalette/laser.png</normaloff>
+     <normalon>:/images/stylusPalette/laserOn.png</normalon>:/images/stylusPalette/laser.png</iconset>
+   </property>
+   <property name="text">
+    <string>Puntatore Laser</string>
+   </property>
+   <property name="toolTip">
+    <string>Puntatore laser virtuale</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
+   </property>
+  </action>
+  <action name="actionLine">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/stylusPalette/line.png</normaloff>
+     <normalon>:/images/stylusPalette/lineOn.png</normalon>:/images/stylusPalette/line.png</iconset>
+   </property>
+   <property name="text">
+    <string>Linea</string>
+   </property>
+   <property name="toolTip">
+    <string>Disegna Linea</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+J</string>
+   </property>
+  </action>
+  <action name="actionText">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/stylusPalette/text.png</normaloff>
+     <normalon>:/images/stylusPalette/textOn.png</normalon>:/images/stylusPalette/text.png</iconset>
+   </property>
+   <property name="text">
+    <string>Testo</string>
+   </property>
+   <property name="toolTip">
+    <string>Scrivi Testo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+K</string>
+   </property>
+  </action>
+  <action name="actionCapture">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/stylusPalette/captureArea.png</normaloff>
+     <normalon>:/images/stylusPalette/captureAreaOn.png</normalon>:/images/stylusPalette/captureArea.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cattura</string>
+   </property>
+   <property name="toolTip">
+    <string>Cattura una parte dello schermo</string>
+   </property>
+  </action>
+  <action name="actionAddItemToCurrentPage">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/addItemToCurrentPage.svg</normaloff>:/images/addItemToCurrentPage.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Aggiungi alla pagina corrente</string>
+   </property>
+   <property name="iconText">
+    <string>Aggiungi alla pagin corrente</string>
+   </property>
+   <property name="toolTip">
+    <string>Aggiungi oggetto alla pagina corrente</string>
+   </property>
+  </action>
+  <action name="actionAddItemToNewPage">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/addItemToNewPage.svg</normaloff>:/images/addItemToNewPage.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Aggiungi a nuova pagina</string>
+   </property>
+   <property name="toolTip">
+    <string>Aggiungi oggetto a una nuova pagina</string>
+   </property>
+  </action>
+  <action name="actionAddItemToLibrary">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/addItemToLibrary.svg</normaloff>:/images/addItemToLibrary.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Aggiungi alla libreria</string>
+   </property>
+   <property name="toolTip">
+    <string>Aggiungi oggetto alla libreria</string>
+   </property>
+  </action>
+  <action name="actionPages">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/newDocument.png</normaloff>:/images/toolbar/newDocument.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pagine</string>
+   </property>
+   <property name="toolTip">
+    <string>Crea una nuova pagina</string>
+   </property>
+  </action>
+  <action name="actionNewPage">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/addItemToCurrentPage.svg</normaloff>:/images/addItemToCurrentPage.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Nuova Pagina</string>
+   </property>
+   <property name="toolTip">
+    <string>Crea una nuova pagina</string>
+   </property>
+  </action>
+  <action name="actionDuplicatePage">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/addItemToNewPage.svg</normaloff>:/images/addItemToNewPage.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Duplica Pagina</string>
+   </property>
+   <property name="toolTip">
+    <string>Duplica la pagina corrente</string>
+   </property>
+  </action>
+  <action name="actionImportPage">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/addItemToLibrary.svg</normaloff>:/images/addItemToLibrary.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Importa Pagina</string>
+   </property>
+   <property name="toolTip">
+    <string>Importa una pagina esterna</string>
+   </property>
+  </action>
+  <action name="actionPodcastPause">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/pause.png</normaloff>:/images/toolbar/pause.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pausa</string>
+   </property>
+   <property name="toolTip">
+    <string>Sospendi registrazione podcast</string>
+   </property>
+  </action>
+  <action name="actionPodcastConfig">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/settings.png</normaloff>:/images/toolbar/settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>Podcast Config</string>
+   </property>
+   <property name="toolTip">
+    <string>Configura registrazione podcast</string>
+   </property>
+  </action>
+  <action name="actionWebTrap">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/extraPalette/webTrap.png</normaloff>
+     <normalon>:/images/extraPalette/webTrapEnabled.png</normalon>:/images/extraPalette/webTrap.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cattura Web</string>
+   </property>
+   <property name="toolTip">
+    <string>Cattura contenuti web</string>
+   </property>
+  </action>
+  <action name="actionWebCustomCapture">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/captureArea.png</normaloff>:/images/toolbar/captureArea.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cattura personalizzata</string>
+   </property>
+   <property name="toolTip">
+    <string>Cattura parte dello schermo</string>
+   </property>
+  </action>
+  <action name="actionWebWindowCapture">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/captureWindow.png</normaloff>:/images/toolbar/captureWindow.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cattura finestra</string>
+   </property>
+   <property name="toolTip">
+    <string>Cattura una finestra</string>
+   </property>
+  </action>
+  <action name="actionWebShowHideOnDisplay">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/eyeClosed.png</normaloff>
+     <normalon>:/images/toolbar/eyeOpened.png</normalon>:/images/toolbar/eyeClosed.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mostra Display</string>
+   </property>
+   <property name="toolTip">
+    <string>Mostra display</string>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::TextHeuristicRole</enum>
+   </property>
+  </action>
+  <action name="actionEraseDesktopAnnotations">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/erasePalette/eraseAnnotation.svg</normaloff>:/images/erasePalette/eraseAnnotation.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Cancella Annotazioni</string>
+   </property>
+   <property name="toolTip">
+    <string>Cancella tutte le annotazioni</string>
+   </property>
+  </action>
+  <action name="actionEduMedia">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/addToolToLibrary.png</normaloff>:/images/toolbar/addToolToLibrary.png</iconset>
+   </property>
+   <property name="text">
+    <string>eduMedia</string>
+   </property>
+   <property name="toolTip">
+    <string>Import eduMedia simulation</string>
+   </property>
+  </action>
+  <action name="actionTutorial">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/tutorial.png</normaloff>:/images/toolbar/tutorial.png</iconset>
+   </property>
+   <property name="text">
+    <string>Tutorial</string>
+   </property>
+   <property name="toolTip">
+    <string>Open the tutorial</string>
+   </property>
+  </action>
+  <action name="actionCheckUpdate">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/updates.png</normaloff>:/images/toolbar/updates.png</iconset>
+   </property>
+   <property name="text">
+    <string>Check Update</string>
+   </property>
+  </action>
+  <action name="actionSankoreEditor">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/paraschool.png</normaloff>:/images/toolbar/paraschool.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open-Sankoré Editor</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Open-Sankoré Widgets Editor</string>
+   </property>
+  </action>
+  <action name="actionHideApplication">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/hide.png</normaloff>:/images/toolbar/hide.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nascondi</string>
+   </property>
+   <property name="toolTip">
+    <string>Minimizza l'applicazione</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="actionGroupItems">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/group.png</normaloff>
+     <normalon>:/images/toolbar/ungroup.png</normalon>:/images/toolbar/group.png</iconset>
+   </property>
+   <property name="text">
+    <string>Group</string>
+   </property>
+   <property name="toolTip">
+    <string>Group items</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionPlay">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/stylusPalette/handPlay.png</normaloff>
+     <normalon>:/images/stylusPalette/handPlayOn.png</normalon>:/images/stylusPalette/handPlay.png</iconset>
+   </property>
+   <property name="text">
+    <string>Play</string>
+   </property>
+   <property name="toolTip">
+    <string>Interazione con gli oggetti</string>
+   </property>
+  </action>
+  <action name="actionEraseBackground">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/erasePalette/eraseBackground.svg</normaloff>:/images/erasePalette/eraseBackground.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Cancella Sfondo</string>
+   </property>
+   <property name="toolTip">
+    <string>Cancella Sfondo</string>
+   </property>
+  </action>
+  <action name="actionBookmark">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/bookmark.png</normaloff>:/images/toolbar/bookmark.png</iconset>
+   </property>
+   <property name="text">
+    <string>Segnalibri</string>
+   </property>
+   <property name="iconText">
+    <string comment="tooltip">Bookmark</string>
+   </property>
+   <property name="toolTip">
+    <string>Segnalibri</string>
+   </property>
+  </action>
+  <action name="actionWebTrapContent">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/addToolToLibrary.png</normaloff>:/images/toolbar/addToolToLibrary.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cattura Web</string>
+   </property>
+   <property name="toolTip">
+    <string>Cattura contenuti web</string>
+   </property>
+  </action>
+  <action name="actionWebTrapToLibrary">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/trapFlashPalette/downloadToLibrary.svg</normaloff>:/images/trapFlashPalette/downloadToLibrary.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt; &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p align=&quot;center&quot; style=&quot; margin-top:2px; margin-bottom:2px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Download to&lt;/p&gt;&lt;p align=&quot;center&quot; style=&quot; margin-top:2px; margin-bottom12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;library&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="toolTip">
+    <string>Download to library</string>
+   </property>
+  </action>
+  <action name="actionWebTrapToCurrentPage">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/trapFlashPalette/downloadToBoard.svg</normaloff>:/images/trapFlashPalette/downloadToBoard.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt; &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p align=&quot;center&quot; style=&quot; margin-top:2px; margin-bottom:2px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Download to&lt;/p&gt;&lt;p align=&quot;center&quot; style=&quot; margin-top:2px; margin-bottom12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;current page&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="toolTip">
+    <string>Download to current page</string>
+   </property>
+  </action>
+  <action name="actionWebTrapLinkToLibrary">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/trapFlashPalette/linkToLibrary.svg</normaloff>:/images/trapFlashPalette/linkToLibrary.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt; &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p align=&quot;center&quot; style=&quot; margin-top:2px; margin-bottom:2px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Add link to&lt;/p&gt;&lt;p align=&quot;center&quot; style=&quot; margin-top:2px; margin-bottom12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;library&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="toolTip">
+    <string>Add link to library</string>
+   </property>
+  </action>
+  <action name="actionWebTrapLinkToPage">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/trapFlashPalette/linkToBoard.svg</normaloff>:/images/trapFlashPalette/linkToBoard.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt; &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;p, li { white-space: pre-wrap; }&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&lt;p align=&quot;center&quot; style=&quot; margin-top:2px; margin-bottom:2px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Add link to&lt;/p&gt;&lt;p align=&quot;center&quot; style=&quot; margin-top:2px; margin-bottom12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;current page&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="toolTip">
+    <string>Add link to current page</string>
+   </property>
+  </action>
+  <action name="actionCenterImageBackground">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../images/imageBackgroundPalette/centerBackground.png</normaloff>../images/imageBackgroundPalette/centerBackground.png</iconset>
+   </property>
+   <property name="text">
+    <string>Centro</string>
+   </property>
+   <property name="toolTip">
+    <string>Immagine al centro</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionAdjustImageBackground">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../images/imageBackgroundPalette/adjustBackground.png</normaloff>
+     <normalon>../images/imageBackgroundPalette/adjustBackground.png</normalon>../images/imageBackgroundPalette/adjustBackground.png</iconset>
+   </property>
+   <property name="text">
+    <string>Posiziona</string>
+   </property>
+   <property name="toolTip">
+    <string>Posiziona Immagine</string>
+   </property>
+  </action>
+  <action name="actionExtendImageBackground">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../images/imageBackgroundPalette/extendBackground.png</normaloff>../images/imageBackgroundPalette/extendBackground.png</iconset>
+   </property>
+   <property name="text">
+    <string>Espandi</string>
+   </property>
+   <property name="toolTip">
+    <string>Espandi immagine</string>
+   </property>
+  </action>
+  <action name="actionFillImageBackground">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../images/imageBackgroundPalette/fillBackground.png</normaloff>
+     <normalon>../images/imageBackgroundPalette/fillBackground.png</normalon>../images/imageBackgroundPalette/fillBackground.png</iconset>
+   </property>
+   <property name="text">
+    <string>Riempi</string>
+   </property>
+   <property name="toolTip">
+    <string>Riempi sfondo</string>
+   </property>
+  </action>
+  <action name="actionMosaicImageBackground">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../images/imageBackgroundPalette/mosaicBackground.png</normaloff>
+     <normalon>../images/imageBackgroundPalette/mosaicBackground.png</normalon>../images/imageBackgroundPalette/mosaicBackground.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mosaico</string>
+   </property>
+   <property name="toolTip">
+    <string>Mosaico</string>
+   </property>
+  </action>
+  <action name="actionWidePageSize_16_10">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/addToPage.png</normaloff>:/images/toolbar/addToPage.png</iconset>
+   </property>
+   <property name="text">
+    <string>Wide Size (16/10)</string>
+   </property>
+   <property name="iconText">
+    <string>Wide Size (16/9)</string>
+   </property>
+   <property name="toolTip">
+    <string>Use Document Wide Size (16/10)</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionRichTextEditor">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/stylusPalette/richTextEditor.png</normaloff>
+     <normalon>:/images/stylusPalette/richTextEditorOn.png</normalon>:/images/stylusPalette/richTextEditor.png</iconset>
+   </property>
+   <property name="text">
+    <string>Editor di Testo</string>
+   </property>
+   <property name="toolTip">
+    <string>Editor di Testo</string>
+   </property>
+  </action>
+  <action name="actionEllipse">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/ellipse.png</normaloff>
+     <normalon>:/images/drawingPalette/ellipseON.png</normalon>:/images/drawingPalette/ellipse.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ellissi</string>
+   </property>
+   <property name="toolTip">
+    <string>Disegna Ellissi</string>
+   </property>
+  </action>
+  <action name="actionChangeFillingColor">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/paint-bucket.png</normaloff>
+     <normalon>:/images/drawingPalette/paint-bucketOn.png</normalon>:/images/drawingPalette/paint-bucket.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cambia colore</string>
+   </property>
+   <property name="toolTip">
+    <string>Cambia colore</string>
+   </property>
+  </action>
+  <action name="actionPolygon">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/free-shape.png</normaloff>
+     <normalon>:/images/drawingPalette/free-shapeOn.png</normalon>:/images/drawingPalette/free-shape.png</iconset>
+   </property>
+   <property name="text">
+    <string>Poligono</string>
+   </property>
+   <property name="toolTip">
+    <string>Disegna Poligono</string>
+   </property>
+  </action>
+  <action name="actionDrawing">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/paint-palette.png</normaloff>
+     <normalon>:/images/drawingPalette/paint-paletteOn.png</normalon>:/images/drawingPalette/paint-palette.png</iconset>
+   </property>
+   <property name="text">
+    <string>Disegna</string>
+   </property>
+   <property name="iconText">
+    <string>Drawing</string>
+   </property>
+   <property name="toolTip">
+    <string>Disegna</string>
+   </property>
+  </action>
+  <action name="actionCircle">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/cercle.png</normaloff>
+     <normalon>:/images/drawingPalette/cercleON.png</normalon>:/images/drawingPalette/cercle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cerchio</string>
+   </property>
+   <property name="toolTip">
+    <string>Disegna un cerchio</string>
+   </property>
+  </action>
+  <action name="actionRectangle">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/rectangle.png</normaloff>
+     <normalon>:/images/drawingPalette/rectangleON.png</normalon>:/images/drawingPalette/rectangle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rettangolo</string>
+   </property>
+   <property name="toolTip">
+    <string>Disegna un Rettangolo</string>
+   </property>
+  </action>
+  <action name="actionSquare">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/square.png</normaloff>
+     <normalon>:/images/drawingPalette/squareON.png</normalon>:/images/drawingPalette/square.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quadrato</string>
+   </property>
+   <property name="toolTip">
+    <string>Disegna un quadrato</string>
+   </property>
+  </action>
+  <action name="actionSmartPen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/freeHand.png</normaloff>
+     <normalon>:/images/drawingPalette/freeHandOn.png</normalon>:/images/drawingPalette/freeHand.png</iconset>
+   </property>
+   <property name="text">
+    <string>Disegno a mano libera</string>
+   </property>
+   <property name="toolTip">
+    <string>disegno a mano libera</string>
+   </property>
+  </action>
+  <action name="actionSmartLine">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/stylusPalette/line.png</normaloff>
+     <normalon>:/images/stylusPalette/lineOn.png</normalon>:/images/stylusPalette/line.png</iconset>
+   </property>
+   <property name="text">
+    <string>Linea</string>
+   </property>
+   <property name="toolTip">
+    <string>Disegna Linea</string>
+   </property>
+  </action>
+  <action name="actionRegularShapes">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/triangle.png</normaloff>
+     <normalon>:/images/drawingPalette/triangleON.png</normalon>:/images/drawingPalette/triangle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Forma Regolare</string>
+   </property>
+   <property name="toolTip">
+    <string>Disegna una Forma Regolare</string>
+   </property>
+  </action>
+  <action name="actionRegularTriangle">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/triangle.png</normaloff>
+     <normalon>:/images/drawingPalette/triangleON.png</normalon>:/images/drawingPalette/triangle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Triangolo</string>
+   </property>
+   <property name="toolTip">
+    <string>Disegna un triangolo</string>
+   </property>
+  </action>
+  <action name="actionRegularSquare">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/square.png</normaloff>
+     <normalon>:/images/drawingPalette/squareON.png</normalon>:/images/drawingPalette/square.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quadrato</string>
+   </property>
+   <property name="toolTip">
+    <string>Disegna un quadrato</string>
+   </property>
+  </action>
+  <action name="actionRegularPentagone">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/Penta.png</normaloff>
+     <normalon>:/images/drawingPalette/PentaON.png</normalon>:/images/drawingPalette/Penta.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pentagono</string>
+   </property>
+   <property name="toolTip">
+    <string>Disegna un Pentagono</string>
+   </property>
+  </action>
+  <action name="actionRegularHexagone">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/hexa.png</normaloff>
+     <normalon>:/images/drawingPalette/hexaON.png</normalon>:/images/drawingPalette/hexa.png</iconset>
+   </property>
+   <property name="text">
+    <string>Esagono</string>
+   </property>
+   <property name="toolTip">
+    <string>Disegna un esagono</string>
+   </property>
+  </action>
+  <action name="actionRegularHeptagone">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/hepta.png</normaloff>
+     <normalon>:/images/drawingPalette/heptaON.png</normalon>:/images/drawingPalette/hepta.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ettagono</string>
+   </property>
+   <property name="toolTip">
+    <string>Disegna un ettagono</string>
+   </property>
+  </action>
+  <action name="actionRegularOctogone">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/octo.png</normaloff>
+     <normalon>:/images/drawingPalette/octoON.png</normalon>:/images/drawingPalette/octo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ottagono</string>
+   </property>
+   <property name="toolTip">
+    <string>Disegna un Ottagono</string>
+   </property>
+  </action>
+  <action name="actionStrokeProperties">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/line-thickness.png</normaloff>:/images/drawingPalette/line-thickness.png</iconset>
+   </property>
+   <property name="text">
+    <string>Proprietà Forma</string>
+   </property>
+   <property name="toolTip">
+    <string>Proprietà Forma</string>
+   </property>
+  </action>
+  <action name="actionFillProperties">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/fill-modes.png</normaloff>:/images/drawingPalette/fill-modes.png</iconset>
+   </property>
+   <property name="text">
+    <string>Proprietà Riempimento</string>
+   </property>
+   <property name="toolTip">
+    <string>Proprietà Riempimento</string>
+   </property>
+  </action>
+  <action name="actionStrokePropertyThickness0">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/smallPen.png</normaloff>:/images/toolbar/smallPen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Spessore della linea</string>
+   </property>
+   <property name="toolTip">
+    <string>Spessore della linea</string>
+   </property>
+  </action>
+  <action name="actionStrokePropertyThickness1">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/mediumPen.png</normaloff>:/images/toolbar/mediumPen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Spessore della linea</string>
+   </property>
+   <property name="toolTip">
+    <string>Spessore della linea</string>
+   </property>
+  </action>
+  <action name="actionStrokePropertyThickness2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/toolbar/largePen.png</normaloff>:/images/toolbar/largePen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Spessore della linea</string>
+   </property>
+   <property name="toolTip">
+    <string>Spessore della linea</string>
+   </property>
+  </action>
+  <action name="actionStrokePropertyStyleSolidLine">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/strokeStyleSolidLine.png</normaloff>:/images/drawingPalette/strokeStyleSolidLine.png</iconset>
+   </property>
+   <property name="text">
+    <string>Linea continua</string>
+   </property>
+   <property name="toolTip">
+    <string>Linea continua</string>
+   </property>
+  </action>
+  <action name="actionStrokePropertyStyleDotLine">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/strokeStyleDotLine .png</normaloff>:/images/drawingPalette/strokeStyleDotLine .png</iconset>
+   </property>
+   <property name="text">
+    <string>Linea tratteggiata</string>
+   </property>
+   <property name="toolTip">
+    <string>Linea tratteggiata</string>
+   </property>
+  </action>
+  <action name="actionColorStyleTransparent">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/fill-transparent.png</normaloff>
+     <normalon>:/images/drawingPalette/fill-transparent.png</normalon>:/images/drawingPalette/fill-transparent.png</iconset>
+   </property>
+   <property name="text">
+    <string>Riempimento trasparente</string>
+   </property>
+   <property name="toolTip">
+    <string>Riempimento trasparente</string>
+   </property>
+  </action>
+  <action name="actionColorStyleGradient">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/fill-gradient.png</normaloff>
+     <normalon>:/images/drawingPalette/fill-gradient.png</normalon>:/images/drawingPalette/fill-gradient.png</iconset>
+   </property>
+   <property name="text">
+    <string>Riempimento gradiente</string>
+   </property>
+   <property name="toolTip">
+    <string>Riempimento gradiente</string>
+   </property>
+  </action>
+  <action name="actionColorStyleFull">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/fill-plain.png</normaloff>
+     <normalon>:/images/drawingPalette/fill-plain.png</normalon>:/images/drawingPalette/fill-plain.png</iconset>
+   </property>
+   <property name="text">
+    <string>Riempimento completo</string>
+   </property>
+   <property name="toolTip">
+    <string>Riempimento completo</string>
+   </property>
+  </action>
+  <action name="actionFillStyleDense">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/fill-dotted.png</normaloff>
+     <normalon>:/images/drawingPalette/fill-dotted.png</normalon>:/images/drawingPalette/fill-dotted.png</iconset>
+   </property>
+   <property name="text">
+    <string>Riempimento denso</string>
+   </property>
+   <property name="toolTip">
+    <string>Riempimento denso</string>
+   </property>
+  </action>
+  <action name="actionFillStyleDiag">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/fill-stripes.png</normaloff>
+     <normalon>:/images/drawingPalette/fill-stripes.png</normalon>:/images/drawingPalette/fill-stripes.png</iconset>
+   </property>
+   <property name="text">
+    <string>Riempimento diagonale</string>
+   </property>
+   <property name="toolTip">
+    <string>Riempimento diagonale</string>
+   </property>
+  </action>
+  <action name="actionStrokePropertyStyleCustomDash">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/strokeStyleCustomDash.png</normaloff>:/images/drawingPalette/strokeStyleCustomDash.png</iconset>
+   </property>
+   <property name="text">
+    <string>Linea tratteggiata tonda</string>
+   </property>
+   <property name="toolTip">
+    <string>Linea tratteggiata tonda</string>
+   </property>
+  </action>
+  <action name="actionAlignObject">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/align-left.png</normaloff>
+     <normalon>:/images/drawingPalette/paint-bucketOn.png</normalon>:/images/drawingPalette/align-left.png</iconset>
+   </property>
+   <property name="text">
+    <string>Allinea oggetti</string>
+   </property>
+   <property name="toolTip">
+    <string>Allinea oggetti</string>
+   </property>
+  </action>
+  <action name="actionAlignToLeft">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/align-left.png</normaloff>
+     <normalon>:/images/drawingPalette/paint-bucketOn.png</normalon>:/images/drawingPalette/align-left.png</iconset>
+   </property>
+   <property name="text">
+    <string>Allinea a sinistra</string>
+   </property>
+   <property name="toolTip">
+    <string>Allinea a sinistra</string>
+   </property>
+  </action>
+  <action name="actionVerticalCenter">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/align-center.png</normaloff>
+     <normalon>:/images/drawingPalette/paint-bucketOn.png</normalon>:/images/drawingPalette/align-center.png</iconset>
+   </property>
+   <property name="text">
+    <string>Allinea al centro</string>
+   </property>
+   <property name="toolTip">
+    <string>Allinea al centro</string>
+   </property>
+  </action>
+  <action name="actionAlignToRight">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/align-right.png</normaloff>
+     <normalon>:/images/drawingPalette/paint-bucketOn.png</normalon>:/images/drawingPalette/align-right.png</iconset>
+   </property>
+   <property name="text">
+    <string>Allinea a destra</string>
+   </property>
+   <property name="toolTip">
+    <string>Allinea a destra</string>
+   </property>
+  </action>
+  <action name="actionAlignToTop">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/align-top.png</normaloff>
+     <normalon>:/images/drawingPalette/paint-bucketOn.png</normalon>:/images/drawingPalette/align-top.png</iconset>
+   </property>
+   <property name="text">
+    <string>Allinea in alto</string>
+   </property>
+   <property name="toolTip">
+    <string>Allinea in alto</string>
+   </property>
+  </action>
+  <action name="actionHorizontalCenter">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/align-middle.png</normaloff>
+     <normalon>:/images/drawingPalette/paint-bucketOn.png</normalon>:/images/drawingPalette/align-middle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Allinea orizzontalmente</string>
+   </property>
+   <property name="toolTip">
+    <string>Allinea orizzontalmente</string>
+   </property>
+  </action>
+  <action name="actionAlignToBottom">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/align-bottom.png</normaloff>
+     <normalon>:/images/drawingPalette/paint-bucketOn.png</normalon>:/images/drawingPalette/align-bottom.png</iconset>
+   </property>
+   <property name="text">
+    <string>Allinea in basso</string>
+   </property>
+   <property name="toolTip">
+    <string>Allinea in basso</string>
+   </property>
+  </action>
+  <action name="actionEndArrowStyleArrow">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/endArrowStyleArrow.png</normaloff>:/images/drawingPalette/endArrowStyleArrow.png</iconset>
+   </property>
+   <property name="text">
+    <string>Freccia</string>
+   </property>
+   <property name="toolTip">
+    <string>Freccia</string>
+   </property>
+  </action>
+  <action name="actionStartArrowStyleArrow">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/startArrowStyleArrow.png</normaloff>:/images/drawingPalette/startArrowStyleArrow.png</iconset>
+   </property>
+   <property name="text">
+    <string>Freccia</string>
+   </property>
+   <property name="toolTip">
+    <string>Freccia</string>
+   </property>
+  </action>
+  <action name="actionEndArrowStyleRound">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/endArrowStyleRound.png</normaloff>:/images/drawingPalette/endArrowStyleRound.png</iconset>
+   </property>
+   <property name="text">
+    <string>cerchio</string>
+   </property>
+   <property name="toolTip">
+    <string>cerchio</string>
+   </property>
+  </action>
+  <action name="actionStartArrowStyleRound">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/startArrowStyleRound.png</normaloff>:/images/drawingPalette/startArrowStyleRound.png</iconset>
+   </property>
+   <property name="text">
+    <string>cerchio</string>
+   </property>
+   <property name="toolTip">
+    <string>cerchio</string>
+   </property>
+  </action>
+  <action name="actionEndArrowStyleNone">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/endArrowStyleNone.png</normaloff>:/images/drawingPalette/endArrowStyleNone.png</iconset>
+   </property>
+   <property name="text">
+    <string>nessun simbolo</string>
+   </property>
+   <property name="toolTip">
+    <string>nessun simbolo</string>
+   </property>
+  </action>
+  <action name="actionStartArrowStyleNone">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/startArrowStyleNone.png</normaloff>:/images/drawingPalette/startArrowStyleNone.png</iconset>
+   </property>
+   <property name="text">
+    <string>nessun simbolo</string>
+   </property>
+   <property name="toolTip">
+    <string>nessun simbolo</string>
+   </property>
+  </action>
+  <action name="actionArrowProperties">
+   <property name="icon">
+    <iconset resource="../sankore.qrc">
+     <normaloff>:/images/drawingPalette/arrowsProperties.png</normaloff>:/images/drawingPalette/arrowsProperties.png</iconset>
+   </property>
+   <property name="text">
+    <string>Proprietà della freccia</string>
+   </property>
+   <property name="toolTip">
+    <string>Proprietà della freccia</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../sankore.qrc"/>
+ </resources>
+ <connections/>
+</ui>

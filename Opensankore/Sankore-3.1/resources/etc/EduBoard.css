@@ -1,0 +1,455 @@
+/*
+ * Per modificare il colore della barra di ricerca: UBFeaturesActionBar mSearchBar->setStyleSheet(...);
+ * Per modificare l'orologio : UBPageNavigationWidget mPageNbr->setStyleSheet(...);
+ * Per modificare l'indicatore delle pagine : UBPageNavigationWidget mClock->setStyleSheet(...);
+ * Alcune modifiche alla vista "Desktop" : UBDesktopAnnotationController mTransparentDrawingView->setStyleSheet(backgroundStyle);
+*/
+
+/* Test bottoni della dock degli strumenti */
+QToolButton
+{
+	color: white;
+	background-color: transparent;
+	border: none;
+}
+
+/* Test bottoni della dock degli strumenti quando premuti */
+QToolButton::pressed
+{
+	color: white;
+	font-weight: bold;
+	font-family: Arial;
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #9cb6d3, stop: 1  #6491bb);
+	border: none;
+}
+
+/* Non va bene bianco, grigio elegante?*/
+/* Colore dei testi */
+QWidget:enabled
+{
+   /*color: #3F3F3F;*/
+   color: black;
+}
+
+/* Colore dei testi per elementi non abilitati */
+QWidget:disabled
+{
+    color: #4d4d4d;
+}
+
+QTextEdit,
+QLineEdit,
+QComboBox#DockPaletteWidgetComboBox QAbstractItemView
+{
+    selection-background-color: #9cb6d3;
+    selection-color: black;
+}
+
+QProgressBar:horizontal {
+    border: 1px solid gray;
+    border-radius: 3px;
+    background: white;
+    padding: 1px;
+}
+
+QProgressBar::chunk:horizontal {
+    /*background: qlineargradient(x1: 0, y1: 0.5, x2: 1, y2: 0.5, stop: 0 green, stop: 1 lightgreen);*/
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #B1B1B1, stop:1 #c4c4c4);
+}
+
+/* Sembra modificare solo la barra degli indirizzi del browser. */
+QMainWindow
+{
+   background-color : #6491bb;
+}
+
+/* Controlla finestre come "Importa", "Esporta" ed altre */
+QDialog
+{
+   background-color: #dddddd;   
+}
+
+/* Controlla il menu principale */
+QMenu
+{
+	border: none;
+    	font-size: 12px;
+	background-color: #6491bb;
+}
+
+/* Gli elementi del menu */
+QMenu::item
+{
+	background-color: #6491bb;
+	color: white;
+}
+
+/* Gli elementi del menu selezionati */
+QMenu::item:selected
+{
+        background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #9cb6d3, stop: 1  #6491bb);
+}
+
+/* I separatori all'interno del menu */
+QMenu::separator
+{
+   background-color: #9cb6d3;
+   border: 1px dotted #216397;
+}
+
+/* Colori per la toolbar*/
+QToolBar
+{
+    spacing: 0px;
+    background-color: #216397;
+    border: none;
+    border-bottom: 3px solid #6491bb;
+}
+
+QToolBar::handle
+{
+    margin: 2px;
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #d3d3d3, stop: 1  #c4c4c4);
+}
+
+/* I separatori all'interno della ToolBar */
+QToolBar::separator
+{
+	border: 2px dotted #6491bb; 
+	border-left: none; 
+	margin-left: 5px; 
+	margin-right: 5px; 
+	width: 1px;
+}
+
+/* Controlla i bottoni all'interno della toolbar */
+QToolBar QToolButton
+{
+    margin: 4px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    border: none;
+    height: 58px;
+}
+
+/* Definisce cosa accade quando si preme un pulsante della toolbar */
+QToolBar QToolButton:pressed
+{
+    margin: 4px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    border: none;
+    height: 58px;
+
+    background: qradialgradient(cx:0.5, cy:0.5, radius: 0.5, fx:0.5, fy:0.5, stop: 0 #9cb6d3, stop: 1  #6491bb);
+}
+
+/* Modifica la vista "Impostazioni" */
+QDialog
+{
+	background-color: #6491bb;
+	color: black;
+}
+
+QDialog QToolButton:pressed
+{
+    background: qradialgradient(cx:0.5, cy:0.5, radius: 0.5, fx:0.5, fy:0.5, stop: 0 #9cb6d3, stop: 1  #6491bb);
+}
+
+/* Controlla i bottoni degli strumenti in posizione sinistra */
+QToolButton#ubButtonGroupLeft
+{
+    background-color: #6491bb;
+    margin-top: 1px;
+    margin-right: 0px;
+    padding: 5px;
+
+    border: 1px solid #6491bb;
+    border-right: none;
+    border-top-left-radius : 10px;
+    border-bottom-left-radius : 10px;
+    height: 14px;
+}
+
+/* Controlla i bottoni degli strumenti in posizione centrale */
+QToolButton#ubButtonGroupCenter
+{
+    background-color: #6491bb;
+    margin-top: 1px;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 5px;
+
+    border: 1px solid #6491bb;
+    border-right: none;
+    border-left: none;
+    height: 14px;
+}
+
+/* Controlla i bottoni degli strumenti in posizione destra */
+QToolButton#ubButtonGroupRight
+{
+    background-color: #6491bb;
+    margin-top: 1px;
+    margin-left: 0px;
+    padding: 5px;
+
+    border: 1px solid #6491bb;
+    border-left: none;
+    border-top-right-radius : 10px;
+    border-bottom-right-radius : 10px;
+    height: 14px;
+}
+
+/* Controlla i bottoni degli strumenti quando vengono cliccati */
+QToolButton#ubButtonGroupLeft:checked,
+QToolButton#ubButtonGroupCenter:checked,
+QToolButton#ubButtonGroupRight:checked
+{
+   background: qradialgradient(cx:0.5, cy:0.5, radius: 0.5, fx:0.5, fy:0.5, stop: 0 #9cb6d3, stop: 1  #6491bb);
+}
+
+QToolButton#ubButtonGroupLeft:checked
+{
+    border-right: 1px solid #6491bb;
+    padding-right: 4px;
+}
+
+QToolButton#ubButtonGroupCenter:checked
+{
+    border-left: 1px solid #6491bb;
+    border-right: 1px solid #6491bb;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+QToolButton#ubButtonGroupRight:checked
+{
+    border-left: 1px solid #6491bb;
+    padding-left: 4px;
+}
+
+/* Il bottone che apre il menu */
+QToolButton#ubButtonMenu
+{
+    margin-right: 2px;
+    padding-right: 12px;
+}
+
+/* Cosa succede quando premiamo il bottone che apre il menu? */
+QToolButton#ubButtonMenu:pressed,
+QToolButton#ubButtonMenu:checked
+{
+       background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #9cb6d3, stop: 1  #6491bb);
+}
+
+/* Sembra controllare la barra inferiore degli strumenti - non sembra possibile modificare i colori ne eliminare icone */
+QToolButton#ubActionPaletteButton
+{
+    margin: 0px;
+}
+
+QFrame#newDocumentFolderFrame,
+QFrame#newDocumentFrame,
+QFrame#newFolderFrame
+{
+    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e6eaf0, stop: 1  #dbe0e8);
+    margin: 50px;
+    padding: 0px;
+    border: none;
+}
+
+/* Sembra modificare qualcosa all'interno della vista "Documenti" */
+QFrame#topLeftFrame,
+QFrame#imageTopLeftFrame,
+QFrame#interactiveTopLeftFrame,
+QFrame#videoTopLeftFrame,
+QFrame#toolTopLeftFrame
+{
+    border: none;
+    border-right: 1px solid #6491bb;
+}
+
+/* Controlla il pannello dello slider inferiore nella vista "Documenti" */
+QWidget#topRightFrame
+{
+    background-color: #6491bb;
+}
+
+QFrame#toolFrame
+{
+    border-top: 1px solid #888888;
+}
+
+/* Regola la vista "Documenti" */
+QTreeView
+{
+    /*background-color: rgb(209, 215, 226);*/
+	background-color: #6491bb;
+}
+
+/* Quando si seleziona un'elemento nella vista "Documenti" */
+QTreeView::item:selected:active
+{
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #9cb6d3, stop: 1  #6491bb);
+    border: none;
+}
+
+QTreeView::item
+{
+    padding-top: 1.5 px;
+    padding-bottom: 1.5 px;
+}
+
+/* Quando un'elemento nella vista "Documenti" è attivo */
+QTreeView::item:selected,
+QTreeView::branch:selected
+{
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #9cb6d3, stop: 1  #6491bb);
+    border: none;
+}
+
+QTreeView::branch:has-siblings:!adjoins-item,
+QTreeView::branch:!has-children:!has-siblings:adjoins-item,
+QTreeView::branch:has-siblings:adjoins-item
+{
+    border-image: none;
+    image: none;
+}
+
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings
+{
+    border-image: none;
+    image: url(:/style/treeview-branch-closed.png);
+}
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings
+{
+    border-image: none;
+    image: url(:/style/treeview-branch-open.png);
+}
+
+/* Controlla lo slider nella vista "Documenti" */
+QSlider::groove:horizontal
+{
+    border: 1px solid #999999;
+    height: 2px;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #B1B1B1, stop:1 #c4c4c4);
+    margin: 2px 0;
+}
+
+/* Controlla lo slider nella vista "Documenti" */
+QSlider::handle:horizontal
+{
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #aaaaaa, stop: 1  #b8b8b8);
+    border: 1px solid #5c5c5c;
+
+    width: 18px;
+    margin: -2px 0;
+    border-radius: 6px;
+}
+
+/* Ha qualcosa a che fare con la barra degli strumenti nella vista "Browser" */
+QTabWidget::pane
+{
+    border: 1px solid #888888;
+    margin-top: -2px;
+}
+
+QTabWidget::pane#libraryTabWidget
+{
+    border: none;
+    border-top: 1px solid #888888;
+}
+
+QTabWidget::tab-bar
+{
+    alignment: center;
+}
+
+/* Controlla il tab nella vista "Browser" - sembra possibile modificare solo l'"alignment" */
+QTabWidget::tab-bar#ubWebBrowserTabWidget
+{
+    background: #dddddd;
+    alignment: left;
+}
+
+/* Controlla i tab nella vista "Impostazioni" */
+QTabBar::tab
+{
+    background-color: #6491bb;
+
+    border: 1px solid #9cb6d3;
+
+    border-bottom: none;
+
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    min-width: 12ex;
+    margin: 2px;
+    margin-top: 6px;
+    margin-bottom: 2px;
+    padding: 4px;
+
+    height: 14px;
+}
+
+QTabBar::tab:first
+{
+    border-left: 1px solid #888888;
+}
+
+QTabBar::tab:last
+{
+    border-right: 1px solid #888888;
+}
+
+QTabBar::tab:selected
+{
+    border-right: 1px solid #888888;
+    border-left: 1px solid #888888;
+    border-bottom: none;
+}
+
+QTabBar::tab:first:selected
+{
+    border-right: 1px solid #888888;
+}
+
+QTabBar::tab:last:selected
+{
+    border-left: 1px solid #888888;
+}
+
+/* Controlla il tab del browse selezionato */
+QTabBar::tab:selected
+{
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #9cb6d3, stop: 1  #6491bb);
+}
+
+QTabBar::tab#ubWebBrowserTabBar
+{
+    background: #9cb6d3;
+    min-width: 150px;
+}
+
+/* Controlla i tab del browser */
+QTabBar::tab:selected#ubWebBrowserTabBar
+{
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #9cb6d3, stop: 1  #6491bb);
+}
+
+/* Controlla la barra degli indirizzi e quella di ricerca */
+QLineEdit#ubWebBrowserLineEdit
+{
+	border: 1px solid #6491bb;
+	border-radius: 7px;
+	padding: 2 2px;
+	background: #9cb6d3;
+	color: black;
+}
